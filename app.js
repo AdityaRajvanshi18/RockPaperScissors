@@ -5,9 +5,7 @@ function getRandomInt(min, max) {
 }
 
 function computerPlay(){
-    let num = getRandomInt(1, 3);
-    console.log(num);
-    
+    let num = getRandomInt(1, 3);   
     if(num === 1){
         console.log("Comp choice: Rock"); //debugging
         return num;
@@ -26,43 +24,44 @@ function playRound(playerSelection, computerSelection){
     if(playerSelection == 1){
         if(computerSelection == 1){
             console.log("Draw");
-            return
+            return 0;
         }
         else if(computerSelection == 2){
             console.log("Computer Wins");
-            return
+            return 2;
         }
         else{
             console.log("Player Wins");
-            return
+            return 1;
         }
     }
     else if(playerSelection == 2){
         if(computerSelection == 1){
             console.log("Player Wins");
-            return
+            return 1;
         }
         else if(computerSelection == 2){
             console.log("Draw");
-            return
+            return 0;
         }
         else{
             console.log("Computer Wins");
-            return
+            return 2;
         }
     }
     else{
         if(computerSelection == 1){
             console.log("Computer Wins");
-            return
+            return 2;
         }
         else if(computerSelection == 2){
             console.log("Player Wins");
-            return
+            
+            return 1;
         }
         else{
             console.log("Draw");
-            return
+            return 0;
         }
     }
 }
@@ -88,6 +87,38 @@ function playerInput(){
     console.log("choice is: " + choice);
 }
 
-const playerSelection = playerInput();
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+
+
+function game(){
+    let playerScore = 0;
+    let compScore = 0;
+    let winner = false;
+    while(winner == false){
+        console.log("Player score is: " + playerScore);
+        console.log("Computer score is: " + compScore);
+        if(playerScore == 5){
+            console.log("The player wins!");
+            winner = true;
+        }
+        else if(compScore == 5){
+            console.log("The computer wins!");
+            winner = true;
+        }
+        else{
+            let playerSelection = playerInput();
+            let computerSelection = computerPlay();
+            let victor = playRound(playerSelection, computerSelection);
+            if(victor == 1){
+                playerScore = playerScore + 1;
+            }
+            else if (victor == 2){
+                compScore = compScore + 1;
+            }
+        }
+        
+    }
+    
+}
+
+game();
+
