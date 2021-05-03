@@ -1,0 +1,60 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:lavender;
+    
+}
+h1{
+    text-align: center;
+}
+
+.score-shout{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.scoreboard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-score{
+    padding: 1em;
+    font-size: 2rem;
+}
+.computer-score{
+    padding: 1em;
+    font-size: 2rem;
+}
+
+.container{
+    display: flex;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+.result-container{
+    padding: 1em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.rules{
+    text-align: center;
+    font-size: 2em;
+}

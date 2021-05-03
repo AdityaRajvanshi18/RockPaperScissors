@@ -1,7 +1,32 @@
 <!DOCTYPE html>
-<head>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Welcome to Rock Paper Scissors!</h1>
+        <div class = "score">
+            <div class= "score-shout" id="result-shout">Score</div>
+            <div class= "scoreboard">
+                <div class ="player-score" id='player-score'>Player: 0</div>
+                <div class ="computer-score" id='comp-score'>Computer: 0</div>
+            </div>
+            
+        </div>
+        <div class="result-container"> 
+            <div class="player" id="player-choice">You chose: </div>
+            <div class="comp" id ="comp-choice">The computer chose: </div>
+        </div>
+        <div class="container">
+            <button class="box" id="rock">Rock</button>
+            <button class="box" id="paper">Paper</button>
+            <button class="box" id="scissors">Scissors</button>
+        </div>
+        <div class="rules">
+            <p>First to 5 wins, wins the game!</p>
+        </div>
+        
+
+    </body>
     <script src="app.js"></script>
-</head>
-<body>
-    
-</body>
+</html>
