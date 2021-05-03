@@ -164,7 +164,7 @@ function updateScore(winner){
     }
 
     playerScoreShow.textContent = `Player: ${playerScore}`;
-    compScoreShow.textContent = `Player: ${compScore}`;
+    compScoreShow.textContent = `Computer: ${compScore}`;
 
 
 }
