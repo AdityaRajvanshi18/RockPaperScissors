@@ -48,6 +48,12 @@ h1{
     text-shadow: 0 0 .5rem black;
 }
 
+.active{
+    transform: scale(1.1);
+    border-color: #a5a5a5;
+    box-shadow: 0 0 1rem #000000;
+}
+
 .result-container{
     padding: 1em;
     text-align: center;

@@ -229,6 +229,16 @@ function finalResult(){
     : (scoreShow.textContent = "Game over, you lost");
 }
 
+function addTransition(e){
+    this.classList.add('active');
+}
+
+function removeTransition(e){
+    if(e.propertyName !== 'transform') return; //skip if not transform
+    this.classList.remove('active');
+}
 //game();
 const btn = document.querySelectorAll('.box');
 btn.forEach((button) => button.addEventListener("click", playRoundNew));
+btn.forEach((button) => button.addEventListener("click", addTransition));
+btn.forEach((button) => button.addEventListener("transitionend", removeTransition));
